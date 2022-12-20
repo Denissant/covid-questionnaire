@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'TBC Contractica CAPS';
+    font-weight: 700;
+    src: url("/fonts/TBCContracticaCAPS-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'BPG Arial';
+    src: url("/fonts/bpg_arial_2009.ttf");
+}
