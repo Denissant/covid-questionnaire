@@ -14,5 +14,5 @@
 }
 
 .hover\:text-shadow:hover {
-    text-shadow: 2px 1px #EAEAEA, 3px 2px black;
+    text-shadow: 2px 1px #EAEAEA, 3px 2px #232323;
 }

@@ -7,7 +7,7 @@ const LandingPage = () => {
       >
         <span
           id='landing-link'
-          className='font-contractica shadow-red-500 inline-block'
+          className='font-contractica text-brand-black inline-block'
         >
           კითხვარის დაწყება
         </span>

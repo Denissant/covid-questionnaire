@@ -11,6 +11,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        'brand-black': '#232323',
         'brand-lightgray': '#EAEAEA',
       },
     }
