@@ -1,5 +1,14 @@
+import LandingPage from './pages/LandingPage';
+import Background from './components/Background';
+import AnimatedBox from './components/AnimatedBox';
+
 function App() {
-  return <div className='App'>Hello, World!</div>;
+  return (
+    <Background>
+      <AnimatedBox />
+      <LandingPage />
+    </Background>
+  );
 }
 
 export default App;
