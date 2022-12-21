@@ -1,16 +1,9 @@
-import { Outlet, useLocation } from 'react-router-dom';
-import { FormHeader, NavArrow } from '../components';
-
-const formRoutes = [
-  '/form/personal-details',
-  '/form/covid',
-  '/form/vaccine',
-  '/form/policy',
-];
+import { Outlet } from 'react-router-dom';
+import { FormHeader, NavArrow } from '../../components';
+import useFormWrapper from './useFormWrapper';
 
 const FormWrapper = () => {
-  const { pathname } = useLocation();
-  const pageIndex = formRoutes.indexOf(pathname);
+  const { pageIndex, formRoutes } = useFormWrapper();
 
   return (
     <main className='relative min-h-screen py-22 px-50'>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import useNavArrow from './useNavArrow';
 
 const NavArrow = (props: {
   isPrevious: boolean;
@@ -6,11 +7,7 @@ const NavArrow = (props: {
   isHidden: boolean;
   url: string;
 }) => {
-  const classes =
-    'bg-[url("/assets/next_2.svg")] w-[18px] h-[23px] bg-no-repeat' +
-    (props.isActive ? '' : ' opacity-50') +
-    (props.isPrevious ? ' rotate-180' : '') +
-    (props.isHidden ? ' invisible' : '');
+  const classes = useNavArrow(props.isActive, props.isPrevious, props.isActive);
 
   return <Link className={classes} to={props.url}></Link>;
 };
