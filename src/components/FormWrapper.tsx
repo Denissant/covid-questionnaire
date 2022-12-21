@@ -1,6 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import NavArrow from './NavArrow';
-import FormHeader from './FormHeader';
+import { FormHeader, NavArrow } from '../components';
 
 const formRoutes = [
   '/form/personal-details',

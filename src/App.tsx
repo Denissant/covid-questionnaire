@@ -1,9 +1,6 @@
-import LandingPage from './pages/LandingPage';
-import Background from './components/Background';
-import AnimatedBox from './components/AnimatedBox';
 import { Route, Routes } from 'react-router-dom';
-import FormWrapper from './components/FormWrapper';
-import PersonalDetailsPage from './pages/PersonalDetailsPage';
+import { AnimatedBox, Background, FormWrapper } from './components';
+import { LandingPage, PersonalDetailsPage } from './pages';
 
 function App() {
   return (
@@ -14,6 +11,9 @@ function App() {
           <Route index element={<LandingPage />} />
           <Route path='form' element={<FormWrapper />}>
             <Route path='personal-details' element={<PersonalDetailsPage />} />
+            <Route path='covid' element={<PersonalDetailsPage />} />
+            <Route path='vaccine' element={<PersonalDetailsPage />} />
+            <Route path='policy' element={<PersonalDetailsPage />} />
           </Route>
         </Route>
       </Routes>
