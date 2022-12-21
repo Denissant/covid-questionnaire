@@ -1,0 +1,61 @@
+:root {
+    --duration: 400ms;
+}
+
+/* Landing Link */
+#landing-link {
+    transform: translateY(-100%);
+    opacity: 0;
+    animation: initializeLink 1000ms ease-out 1000ms forwards;
+}
+
+/* Logo */
+#animated-box-1,
+#animated-box-2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all var(--duration), border-radius 0ms;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#animated-box-wrapper {
+    position: absolute;
+    top: calc(36% - 50px);
+    left: calc(50% - 50px);
+    transition: all var(--duration);
+}
+
+.logo#animated-box-wrapper {
+    width: 100px;
+    height: 100px;
+    animation: initializeLogo var(--duration) forwards ease-out 100ms;
+}
+
+.logo #animated-box-1 {
+    background-image: url("/assets/redberry-logo.svg");
+}
+
+
+/* Keyframes */
+
+@keyframes initializeLink {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes initializeLogo {
+    0% {
+        transform: scale(30, 30);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}

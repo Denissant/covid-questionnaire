@@ -1,13 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ['BPG Arial', 'sans-serif'],
+      contractica: ['TBC Contractica CAPS', 'sans-serif']
+    },
+    extend: {
+      colors: {
+        'brand-black': '#232323',
+        'brand-lightgray': '#EAEAEA',
+      },
+    }
   },
   plugins: [
-    require('@tailwindcss/forms')
-  ],
-}
+    require('@tailwindcss/forms'),
+  ]
+};
