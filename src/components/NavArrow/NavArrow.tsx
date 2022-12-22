@@ -7,7 +7,7 @@ const NavArrow = (props: {
   isHidden: boolean;
   url: string;
 }) => {
-  const classes = useNavArrow(props.isActive, props.isPrevious, props.isActive);
+  const classes = useNavArrow(props.isActive, props.isPrevious, props.isHidden);
 
   return <Link className={classes} to={props.url}></Link>;
 };
