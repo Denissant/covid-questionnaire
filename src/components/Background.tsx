@@ -1,8 +1,10 @@
-import { PropsWithChildren } from 'react';
+import { Outlet } from 'react-router-dom';
 
-const Background = (props: PropsWithChildren) => {
+const Background = () => {
   return (
-    <div className='min-h-screen bg-brand-lightgray'>{props.children}</div>
+    <div className='min-h-screen bg-brand-lightgray'>
+      <Outlet />
+    </div>
   );
 };
 
