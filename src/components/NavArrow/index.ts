@@ -1,1 +1,1 @@
-export { default } from './NavArrow';
+export { default as NavArrow } from './NavArrow';
