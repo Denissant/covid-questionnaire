@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import { AnimatedBox, Background, FormWrapper } from './components';
-import { LandingPage, PersonalDetailsPage } from './pages';
+import { AnimatedBox, Background, FormWrapper } from 'components';
+import { LandingPage, PersonalDetailsPage } from 'pages';
 
 function App() {
   return (
