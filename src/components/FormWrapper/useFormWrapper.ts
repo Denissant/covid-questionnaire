@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 
-function useFormWrapper() {
+export const useFormWrapper = () => {
   const formRoutes = [
     '/form/personal-details',
     '/form/covid',
@@ -12,6 +12,4 @@ function useFormWrapper() {
   const pageIndex = formRoutes.indexOf(pathname);
 
   return { pageIndex, formRoutes };
-}
-
-export default useFormWrapper;
+};

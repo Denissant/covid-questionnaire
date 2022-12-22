@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { FormHeader, NavArrow } from '../../components';
-import useFormWrapper from './useFormWrapper';
+import { useFormWrapper } from './useFormWrapper';
 
 const FormWrapper = () => {
   const { pageIndex, formRoutes } = useFormWrapper();

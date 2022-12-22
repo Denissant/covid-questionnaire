@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import useNavArrow from './useNavArrow';
+import { useNavArrow } from './useNavArrow';
 
 const NavArrow = (props: {
   isPrevious: boolean;
