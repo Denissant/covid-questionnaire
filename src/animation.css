@@ -9,7 +9,7 @@
     animation: initializeLink 1000ms ease-out 1000ms forwards;
 }
 
-/* Logo */
+/* Animated Box transitions between routes */
 #animated-box-1,
 #animated-box-2 {
     width: 100%;
@@ -27,6 +27,7 @@
     transition: all var(--duration);
 }
 
+/* Logo */
 .logo#animated-box-wrapper {
     width: 100px;
     height: 100px;
@@ -37,6 +38,75 @@
     background-image: url("/assets/redberry-logo.svg");
 }
 
+/* Rectangle */
+.rectangle#animated-box-wrapper {
+    width: 32.4vw;
+    height: 6.9vh;
+    left: 50.9vw;
+    top: 30vh;
+}
+
+.rectangle #animated-box-1 {
+    background-image: url("/assets/redberry-logo.svg");
+    opacity: 0;
+}
+
+.rectangle #animated-box-2 {
+    background-color: #D6D16E;
+}
+
+/* Circle */
+.circle#animated-box-wrapper {
+    width: 11.9vw;
+    height: 21.2vh;
+    left: 45.8vw;
+    top: 35.2vh;
+}
+
+.circle #animated-box-1 {
+    background-color: transparent;
+    opacity: 0;
+}
+
+.circle #animated-box-2 {
+    background-color: #DD3939;
+    border-radius: 50%;
+}
+
+/* Star */
+.star#animated-box-wrapper {
+    width: 15vw;
+    height: 28.9vh;
+    left: 50.6vw;
+    top: 16.7vh;
+}
+
+.star #animated-box-1 {
+    background-image: url("/assets/star.svg");
+}
+
+.star #animated-box-2 {
+    border-radius: 50%;
+    opacity: 0;
+}
+
+/* Heart */
+.heart#animated-box-wrapper {
+    width: 10.2vw;
+    height: 15.9vh;
+    left: 54.5vw;
+    top: 26vh;
+}
+
+.heart #animated-box-1 {
+    background-image: url("/assets/star.svg");
+    opacity: 0;
+}
+
+.heart #animated-box-2 {
+    background-image: url("/assets/heart.svg");
+    opacity: 1;
+}
 
 /* Keyframes */
 
