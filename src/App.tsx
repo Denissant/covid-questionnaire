@@ -1,6 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import { AnimatedBox, Background, FormWrapper } from 'components';
-import { LandingPage, PersonalDetailsPage } from 'pages';
+import {
+  LandingPage,
+  PersonalDetailsPage,
+  VaccinePage,
+  CovidPage,
+  PolicyPage,
+} from 'pages';
 
 function App() {
   return (
@@ -11,9 +17,9 @@ function App() {
           <Route index element={<LandingPage />} />
           <Route path='form' element={<FormWrapper />}>
             <Route path='personal-details' element={<PersonalDetailsPage />} />
-            <Route path='covid' element={<PersonalDetailsPage />} />
-            <Route path='vaccine' element={<PersonalDetailsPage />} />
-            <Route path='policy' element={<PersonalDetailsPage />} />
+            <Route path='covid' element={<CovidPage />} />
+            <Route path='vaccine' element={<VaccinePage />} />
+            <Route path='policy' element={<PolicyPage />} />
           </Route>
         </Route>
       </Routes>

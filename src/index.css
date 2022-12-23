@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    [type='text']:focus,
+    [type='email']:focus,
+    [type='date']:focus,
+    textarea:focus {
+        --tw-ring-color: #F15524;
+        border-color: var(--tw-ring-color);
+    }
+
+    [type="radio"]:focus, [type="radio"]:checked:focus {
+        --tw-ring-color: #F15524;
+        background-color: #F15524;
+    }
+}
+
 @font-face {
     font-family: 'TBC Contractica CAPS';
     font-weight: 700;
