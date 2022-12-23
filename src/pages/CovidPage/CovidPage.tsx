@@ -1,7 +1,10 @@
 import { DateInput, RadioInput, TextInput } from 'components';
 import { hadAntibodyTestOptions, hadCovidOptions } from './radioOptions';
+import { useCovidPage } from './useCovidPage';
 
 const CovidPage = () => {
+  const { hadCovidValue, hadAntibodyTestValue } = useCovidPage();
+
   return (
     <>
       <form className='w-min animate-fade-in'>
@@ -9,33 +12,42 @@ const CovidPage = () => {
           name='had_covid'
           label='გაქვს გადატანილი Covid-19?*'
           options={hadCovidOptions}
+          validationRules={{ required: 'აირჩიე ერთ-ერთი პასუხი' }}
         />
-        <RadioInput
-          name='had_antibody_test'
-          label='ანტისხეულების ტესტი გაქვს გაკეთებული?*'
-          options={hadAntibodyTestOptions}
-        />
-        <DateInput
-          name='test_date'
-          label='თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი რიცხვი და ანტისხეულების რაოდენობა*'
-          placeholder='დდ/თთ/წწ'
-          error=''
-        />
-        <div className='m-5'>
-          <TextInput
-            name='number'
-            label='ანტისხეულების რაოდენობა'
-            placeholder='ანტისხეულების რაოდენობა'
-            labelIsHidden={true}
-            error=''
+        {hadCovidValue === 'yes' && (
+          <RadioInput
+            name='had_antibody_test'
+            label='ანტისხეულების ტესტი გაქვს გაკეთებული?*'
+            options={hadAntibodyTestOptions}
+            validationRules={{ required: 'აირჩიე ერთ-ერთი პასუხი' }}
           />
-        </div>
-        <DateInput
-          name='covid_sickness_date'
-          label='მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა Covid-19*'
-          placeholder='დდ/თთ/წწ'
-          error=''
-        />
+        )}
+
+        {hadAntibodyTestValue === 'true' && (
+          <>
+            <DateInput
+              name='test_date'
+              label='თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი რიცხვი და ანტისხეულების რაოდენობა'
+              placeholder='დდ/თთ/წწ'
+            />
+            <div className='m-5'>
+              <TextInput
+                name='number'
+                label='ანტისხეულების რაოდენობა'
+                placeholder='ანტისხეულების რაოდენობა'
+                labelIsHidden={true}
+              />
+            </div>
+          </>
+        )}
+        {hadAntibodyTestValue === 'false' && (
+          <DateInput
+            name='covid_sickness_date'
+            label='მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა Covid-19*'
+            placeholder='დდ/თთ/წწ'
+            validationRules={{ required: 'ამ ველის შევსება სავალდებულოა' }}
+          />
+        )}
       </form>
       <img
         src='/assets/background-covid.png'
