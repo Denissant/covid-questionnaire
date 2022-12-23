@@ -8,7 +8,9 @@ const FormWrapper = () => {
   return (
     <main className='relative min-h-screen py-22 px-50'>
       <FormHeader pageNumber={pageIndex + 1} />
-      <Outlet />
+      <section className='flex items-start justify-between'>
+        <Outlet />
+      </section>
       <nav className='absolute bottom-22 left-1/2 -translate-x-1/2 w-36 flex justify-between'>
         {
           <NavArrow
