@@ -6,3 +6,4 @@ export * from './FormWrapper';
 export { default as TextInput } from './TextInput';
 export { default as RadioInput } from './RadioInput';
 export { default as FormLabel } from './FormLabel';
+export { default as DateInput } from './DateInput';
