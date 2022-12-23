@@ -1,12 +1,19 @@
+import { Control, useFormState } from 'react-hook-form';
+
 export const useNavArrow = (
-  isActive: boolean,
+  formControl: Control,
   isPrevious: boolean,
   isHidden: boolean
 ) => {
-  return (
+  const { isValid } = useFormState({
+    control: formControl,
+  });
+
+  const classNames =
     'bg-[url("/assets/next.svg")] w-[18px] h-[23px] bg-no-repeat' +
-    (isActive ? '' : ' opacity-50') +
+    (isValid || isPrevious ? '' : ' opacity-50') +
     (isPrevious ? ' rotate-180' : '') +
-    (isHidden ? ' invisible' : '')
-  );
+    (isHidden ? ' invisible' : '');
+
+  return { isValid, classNames };
 };
