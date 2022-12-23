@@ -4,7 +4,7 @@ import { hadAntibodyTestOptions, hadCovidOptions } from './radioOptions';
 const CovidPage = () => {
   return (
     <>
-      <form className='w-min'>
+      <form className='w-min animate-fade-in'>
         <RadioInput
           name='had_covid'
           label='გაქვს გადატანილი Covid-19?*'
@@ -37,7 +37,11 @@ const CovidPage = () => {
           error=''
         />
       </form>
-      <img src='/assets/background-covid.png' alt='' className='-mt-4 mr-3' />
+      <img
+        src='/assets/background-covid.png'
+        alt=''
+        className='-mt-4 mr-3 animate-fade-in'
+      />
     </>
   );
 };

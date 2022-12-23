@@ -7,7 +7,7 @@ import {
 const CovidPage = () => {
   return (
     <>
-      <form className='w-min mb-18'>
+      <form className='w-min mb-18 animate-fade-in'>
         <div className='text-1.5xl mb-11 w-156'>
           <p className='mt-6 '>
             რედბერის მთავარი ღირებულება ჩვენი გუნდის თითოეული წევრია. გარემო,
@@ -45,7 +45,11 @@ const CovidPage = () => {
           <SubmitButton label='დასრულება' />
         </div>
       </form>
-      <img src='/assets/background-policy.png' alt='' className='mt-15 mr-13' />
+      <img
+        src='/assets/background-policy.png'
+        alt=''
+        className='mt-15 mr-13 animate-fade-in'
+      />
     </>
   );
 };

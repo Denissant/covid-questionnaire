@@ -8,7 +8,7 @@ import {
 const CovidPage = () => {
   return (
     <>
-      <form className='w-min'>
+      <form className='w-min animate-fade-in'>
         <RadioInput
           name='had_vaccine'
           label='უკვე აცრილი ხარ?*'
@@ -46,7 +46,7 @@ const CovidPage = () => {
       <img
         src='/assets/background-vaccine.png'
         alt=''
-        className='mt-11 -mr-1'
+        className='mt-11 -mr-1 animate-fade-in'
       />
     </>
   );

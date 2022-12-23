@@ -3,7 +3,7 @@ import { TextInput } from 'components';
 const PersonalDetailsPage = () => {
   return (
     <>
-      <form className='w-min'>
+      <form className='w-min animate-fade-in'>
         <TextInput
           name='first_name'
           label='სახელი*'
@@ -30,7 +30,7 @@ const PersonalDetailsPage = () => {
       <img
         src='/assets/background-personal-details.png'
         alt=''
-        className='-mt-16 -mr-8'
+        className='-mt-16 -mr-8 animate-fade-in'
       />
     </>
   );
