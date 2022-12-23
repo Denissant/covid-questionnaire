@@ -8,3 +8,5 @@ export { default as RadioInput } from './RadioInput';
 export { default as FormLabel } from './FormLabel';
 export { default as DateInput } from './DateInput';
 export { default as Suggestion } from './Suggestion';
+export { default as TextAreaInput } from './TextAreaInput';
+export { default as SubmitButton } from './SubmitButton';
