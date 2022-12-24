@@ -24,11 +24,13 @@ const CovidPage = () => {
           name='non_formal_meetings'
           label='რა სიხშირით შეიძლება გვქონდეს საერთო არაფორმალური ონლაინ შეხვედრები, სადაც ყველა სურვილისამებრ ჩაერთვება?*'
           options={nonFormalMeetingsOptions}
+          validationRules={{ required: 'აირჩიე ერთ-ერთი პასუხი' }}
         />
         <RadioInput
           name='number_of_days_from_office'
           label='კვირაში რამდენი დღე ისურვებდი ოფისიდან მუშაობას?*'
           options={numberOfDaysFromOfficeOptions}
+          validationRules={{ required: 'აირჩიე ერთ-ერთი პასუხი' }}
         />
         <TextAreaInput
           name='what_about_meetings_in_live'

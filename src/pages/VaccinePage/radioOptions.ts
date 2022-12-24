@@ -20,7 +20,7 @@ export const vaccinationStageOptions = [
   },
   {
     label: 'პირველი დოზა და არ დავრეგისტრირებულვარ მეორეზე',
-    value: 'first_dosage_and_not_registered_yet ',
+    value: 'first_dosage_and_not_registered_yet',
   },
 ];
 
