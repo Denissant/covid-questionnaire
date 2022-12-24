@@ -1,6 +1,5 @@
-import { FormLabel } from 'components';
+import { FormError, FormLabel } from 'components';
 import { useFormContextAndWatch } from 'hooks';
-import FormError from './FormError';
 
 const RadioInput = (props: {
   name: string;

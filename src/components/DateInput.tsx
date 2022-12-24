@@ -1,5 +1,4 @@
-import { FormLabel } from 'components';
-import FormError from './FormError';
+import { FormError, FormLabel } from 'components';
 import { useFormContextAndWatch } from 'hooks';
 
 const DateInput = (props: {
