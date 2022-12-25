@@ -6,14 +6,12 @@ export const usePolicyPage = () => {
   const navigate = useNavigate();
 
   const onSubmit = async (formData: { [key: string]: string | boolean }) => {
-    // Reformat
     for (const [key, value] of Object.entries(formData)) {
       if (key === 'had_antibody_test' || key === 'had_vaccine') {
         formData[key] = Boolean(value);
       }
       if (!value) delete formData[key];
     }
-    // Send Data
     const response = await fetch('https://covid19.devtest.ge/api/create', {
       headers: {
         Accept: 'application/json',
@@ -22,7 +20,6 @@ export const usePolicyPage = () => {
       method: 'POST',
       body: JSON.stringify(formData),
     });
-    // Error or Redirect
     if (!response.ok) {
       const errors = await response.json();
       alert(`Error: ${errors.message}`);
