@@ -40,7 +40,8 @@ module.exports = {
         'brand-orange': '#F15524',
       },
       animation: {
-        'fade-in': 'fade-in 1s ease-out forwards'
+        'fade-in': 'fade-in 1s ease-out forwards',
+        'fade-in-delayed': 'fade-in 300ms ease-out forwards 500ms'
       },
       keyframes: {
         'fade-in': {
