@@ -1,13 +1,19 @@
-import { RadioInput, TextAreaInput, SubmitButton } from 'components';
+import { RadioInput, SubmitButton, TextAreaInput } from 'components';
 import {
   nonFormalMeetingsOptions,
   numberOfDaysFromOfficeOptions,
 } from './radioOptions';
+import { usePolicyPage } from './usePolicyPage';
 
 const PolicyPage = () => {
+  const { handleSubmit, onSubmit } = usePolicyPage();
+
   return (
     <>
-      <form className='w-min mb-18 animate-fade-in'>
+      <form
+        className='w-min mb-18 animate-fade-in'
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className='text-1.5xl mb-11 w-156'>
           <p className='mt-6 '>
             რედბერის მთავარი ღირებულება ჩვენი გუნდის თითოეული წევრია. გარემო,
