@@ -12,7 +12,7 @@ export const usePolicyPage = () => {
       }
       if (!value) delete formData[key];
     }
-    const response = await fetch('https://covid19.devtest.ge/api/create', {
+    const response = await fetch(import.meta.env.VITE_API_ENDPOINT, {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
