@@ -4,7 +4,7 @@ import {
   numberOfDaysFromOfficeOptions,
 } from './radioOptions';
 
-const CovidPage = () => {
+const PolicyPage = () => {
   return (
     <>
       <form className='w-min mb-18 animate-fade-in'>
@@ -56,4 +56,4 @@ const CovidPage = () => {
   );
 };
 
-export default CovidPage;
+export default PolicyPage;
