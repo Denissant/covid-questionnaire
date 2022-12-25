@@ -11,11 +11,20 @@ export const usePolicyPage = () => {
       keyof FormFields,
       string
     ][]) {
+      if (!value) {
+        delete formData[key];
+        continue;
+      }
       if (key === 'had_antibody_test' || key === 'had_vaccine') {
         formData[key] = Boolean(value);
       }
-      if (!value) delete formData[key];
+      if (key === 'test_date' || key === 'number') {
+        if (!formData['antibodies']) formData['antibodies'] = {};
+        formData['antibodies'][key] = value;
+        delete formData[key];
+      }
     }
+
     const response = await fetch(import.meta.env.VITE_API_ENDPOINT, {
       headers: {
         Accept: 'application/json',

@@ -13,4 +13,8 @@ export type FormFields = {
   number_of_days_from_office: string;
   what_about_meetings_in_live: string;
   tell_us_your_opinion_about_us: string;
+  antibodies?: {
+    test_date?: string;
+    number?: string;
+  };
 };
