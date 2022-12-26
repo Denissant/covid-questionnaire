@@ -1,4 +1,4 @@
-import { DateInput, RadioInput, TextInput } from 'components';
+import { DateInput, Form, RadioInput, TextInput } from 'components';
 import { hadAntibodyTestOptions, hadCovidOptions } from './radioOptions';
 import { useCovidPage } from './useCovidPage';
 
@@ -7,7 +7,7 @@ const CovidPage = () => {
 
   return (
     <>
-      <form className='w-min animate-fade-in'>
+      <Form>
         <RadioInput
           name='had_covid'
           label='გაქვს გადატანილი Covid-19?*'
@@ -48,7 +48,7 @@ const CovidPage = () => {
             validationRules={{ required: 'ამ ველის შევსება სავალდებულოა' }}
           />
         )}
-      </form>
+      </Form>
       <img
         src='/assets/background-covid.png'
         alt=''

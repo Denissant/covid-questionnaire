@@ -1,4 +1,4 @@
-import { RadioInput, SubmitButton, TextAreaInput } from 'components';
+import { Form, RadioInput, SubmitButton, TextAreaInput } from 'components';
 import {
   nonFormalMeetingsOptions,
   numberOfDaysFromOfficeOptions,
@@ -10,10 +10,7 @@ const PolicyPage = () => {
 
   return (
     <>
-      <form
-        className='w-min mb-18 animate-fade-in'
-        onSubmit={handleSubmit(onSubmit)}
-      >
+      <Form formClasses='mb-64 pb-64' onSubmit={handleSubmit(onSubmit)}>
         <div className='text-1.5xl mb-11 w-156'>
           <p className='mt-6 '>
             რედბერის მთავარი ღირებულება ჩვენი გუნდის თითოეული წევრია. გარემო,
@@ -52,7 +49,7 @@ const PolicyPage = () => {
         <div className='text-right mt-13'>
           <SubmitButton label='დასრულება' />
         </div>
-      </form>
+      </Form>
       <img
         src='/assets/background-policy.png'
         alt=''
