@@ -57,7 +57,7 @@ const PolicyPage = () => {
       <img
         src='/assets/background-policy.png'
         alt=''
-        className='mt-15 mr-13 animate-fade-in'
+        className='right-50 mt-15 mr-17 animate-fade-in fixed'
       />
     </>
   );
