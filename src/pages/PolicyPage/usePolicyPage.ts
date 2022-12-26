@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FormFields } from 'types';
 
 export const usePolicyPage = () => {
-  const { handleSubmit } = useFormContext();
+  const { handleSubmit } = useFormContext<FormFields>();
   const navigate = useNavigate();
 
   const onSubmit = async (formData: FormFields) => {
