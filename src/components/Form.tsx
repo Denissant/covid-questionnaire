@@ -5,6 +5,7 @@ import { NavArrow } from './NavArrow';
 
 const Form = (
   props: PropsWithChildren<{
+    navClasses: string;
     formClasses?: string;
     onSubmit?: () => {};
   }>
@@ -20,7 +21,9 @@ const Form = (
       }
     >
       {props.children}
-      <nav className='left-[110%] w-36 flex justify-between'>
+      <nav
+        className={'left-[110%] w-36 flex justify-between ' + props.navClasses}
+      >
         {
           <NavArrow
             isHidden={pageIndex < 1}

@@ -12,7 +12,7 @@ const VaccinePage = () => {
 
   return (
     <>
-      <Form>
+      <Form navClasses='absolute bottom-24'>
         <RadioInput
           name='had_vaccine'
           label='უკვე აცრილი ხარ?*'

@@ -3,7 +3,7 @@ import { Form, TextInput } from 'components';
 const PersonalDetailsPage = () => {
   return (
     <>
-      <Form>
+      <Form navClasses='absolute bottom-24'>
         <TextInput
           name='first_name'
           label='სახელი*'

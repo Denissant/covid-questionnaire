@@ -10,7 +10,11 @@ const PolicyPage = () => {
 
   return (
     <>
-      <Form formClasses='mb-64 pb-64' onSubmit={handleSubmit(onSubmit)}>
+      <Form
+        navClasses='relative -mt-28'
+        formClasses='mb-64 pb-64'
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className='text-1.5xl mb-11 w-156'>
           <p className='mt-6 '>
             რედბერის მთავარი ღირებულება ჩვენი გუნდის თითოეული წევრია. გარემო,

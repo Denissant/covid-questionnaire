@@ -7,7 +7,7 @@ const CovidPage = () => {
 
   return (
     <>
-      <Form>
+      <Form navClasses='absolute bottom-24'>
         <RadioInput
           name='had_covid'
           label='გაქვს გადატანილი Covid-19?*'
