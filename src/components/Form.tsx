@@ -1,4 +1,7 @@
 import { PropsWithChildren } from 'react';
+import { useOutletContext } from 'react-router-dom';
+import { FormOutletContext } from '../types';
+import { NavArrow } from './NavArrow';
 
 const Form = (
   props: PropsWithChildren<{
@@ -6,6 +9,8 @@ const Form = (
     onSubmit?: () => {};
   }>
 ) => {
+  const { pageIndex, formRoutes } = useOutletContext<FormOutletContext>();
+
   return (
     <form
       onSubmit={props?.onSubmit}
@@ -15,6 +20,22 @@ const Form = (
       }
     >
       {props.children}
+      <nav className='left-[110%] w-36 flex justify-between'>
+        {
+          <NavArrow
+            isHidden={pageIndex < 1}
+            isPrevious={true}
+            url={formRoutes[pageIndex - 1]}
+          />
+        }
+        {
+          <NavArrow
+            isHidden={pageIndex > 2}
+            isPrevious={false}
+            url={formRoutes[pageIndex + 1]}
+          />
+        }
+      </nav>
     </form>
   );
 };

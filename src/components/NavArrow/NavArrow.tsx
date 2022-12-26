@@ -1,16 +1,12 @@
 import { Link } from 'react-router-dom';
 import { useNavArrow } from './useNavArrow';
-import { Control } from 'react-hook-form';
 
 const NavArrow = (props: {
   isPrevious: boolean;
   isHidden: boolean;
   url: string;
-  formControl: Control<any>;
-  triggerFormValidation: () => {};
 }) => {
-  const { isValid, classNames } = useNavArrow(
-    props.formControl,
+  const { isValid, classNames, triggerFormValidation } = useNavArrow(
     props.isPrevious,
     props.isHidden
   );
@@ -18,10 +14,7 @@ const NavArrow = (props: {
   return isValid || props.isPrevious ? (
     <Link className={classNames} to={props.url} />
   ) : (
-    <span
-      className={classNames}
-      onClick={() => props.triggerFormValidation()}
-    ></span>
+    <span className={classNames} onClick={() => triggerFormValidation()}></span>
   );
 };
 
