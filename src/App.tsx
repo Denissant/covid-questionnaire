@@ -6,6 +6,7 @@ import {
   VaccinePage,
   CovidPage,
   PolicyPage,
+  ThanksPage,
 } from 'pages';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path='vaccine' element={<VaccinePage />} />
             <Route path='policy' element={<PolicyPage />} />
           </Route>
+          <Route path='thanks' element={<ThanksPage />} />
         </Route>
       </Routes>
     </>

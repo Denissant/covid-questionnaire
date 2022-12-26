@@ -6,7 +6,7 @@ import {
 } from './radioOptions';
 import { useVaccinePage } from './useVaccinePage';
 
-const CovidPage = () => {
+const VaccinePage = () => {
   const { hadVaccineValue, vaccinationStageValue, iAmWaitingValue } =
     useVaccinePage();
 
@@ -69,4 +69,4 @@ const CovidPage = () => {
   );
 };
 
-export default CovidPage;
+export default VaccinePage;

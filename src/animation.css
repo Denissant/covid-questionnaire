@@ -108,6 +108,19 @@
     opacity: 1;
 }
 
+/* Thanks Page */
+
+#thanks-sparkle-lg {
+    left: 41.5vw;
+    top: 25.5vw;
+    animation: moveBigStar 200ms forwards 1000ms;
+}
+
+#thanks-sparkle-sm {
+    left: 54.4vw;
+    animation: moveSmallStar 200ms forwards 1000ms;
+}
+
 /* Keyframes */
 
 @keyframes initializeLink {
@@ -129,3 +142,24 @@
         transform: scale(1, 1);
     }
 }
+
+@keyframes moveBigStar {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-2vw, -7vh);
+        opacity: 1;
+    }
+}
+
+@keyframes moveSmallStar {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(4vw, 5vh);
+        opacity: 1;
+    }
+}
+
