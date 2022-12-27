@@ -33,7 +33,11 @@
     ```shell
       npm install
     ```
-3. Run the development server:
+3. Create the `.env` file:
+   ```shell
+      cp .env.example .env
+   ```
+4. Run the development server:
    ```shell
       npm run dev
    ```
