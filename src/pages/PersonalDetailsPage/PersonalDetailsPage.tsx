@@ -1,9 +1,9 @@
-import { TextInput } from 'components';
+import { Form, TextInput } from 'components';
 
 const PersonalDetailsPage = () => {
   return (
     <>
-      <form className='w-min animate-fade-in'>
+      <Form navClasses='absolute bottom-24'>
         <TextInput
           name='first_name'
           label='სახელი*'
@@ -57,7 +57,7 @@ const PersonalDetailsPage = () => {
         <p className='w-72 text-brand-gray'>
           *-ით მონიშნული ველების შევსება სავალდებულოა
         </p>
-      </form>
+      </Form>
       <img
         src='/assets/background-personal-details.png'
         alt=''

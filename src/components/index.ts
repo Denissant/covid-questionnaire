@@ -11,3 +11,4 @@ export { default as Suggestion } from './Suggestion';
 export { default as TextAreaInput } from './TextAreaInput';
 export { default as SubmitButton } from './SubmitButton';
 export { default as FormError } from './FormError';
+export { default as Form } from './Form';

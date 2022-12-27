@@ -1,4 +1,4 @@
-import { RadioInput, Suggestion } from 'components';
+import { Form, RadioInput, Suggestion } from 'components';
 import {
   hadVaccineOptions,
   iAmWaitingOptions,
@@ -12,7 +12,7 @@ const VaccinePage = () => {
 
   return (
     <>
-      <form className='w-min animate-fade-in'>
+      <Form navClasses='absolute bottom-24'>
         <RadioInput
           name='had_vaccine'
           label='უკვე აცრილი ხარ?*'
@@ -59,7 +59,7 @@ const VaccinePage = () => {
             linkText='https://booking.moh.gov.ge/'
           />
         )}
-      </form>
+      </Form>
       <img
         src='/assets/background-vaccine.png'
         alt=''
