@@ -6,6 +6,7 @@
 * [Tech Stack](#tech-stack)
 * [Getting Started](#getting-started)
 * [Building for Production](#building-for-production)
+* [Resources](#resources)
 * [Live Deployment](#live-deployment)
 
 
@@ -51,6 +52,15 @@ Run the following command:
 ```
 
 The built app will be located in the `dist` directory
+
+
+## Resources
+
+- [Application Design](https://www.figma.com/file/56t2BI25FcD0LAIjR4GVkQ/კითხვარი)
+- [Commit message naming conventions](https://redberry.gitbook.io/resources/other/git-is-semantikuri-komitebi)
+- [Project Specifications](https://redberry.gitbook.io/assignment-i-covid-questionaire/)
+
+
 
 ## Live Deployment
 
