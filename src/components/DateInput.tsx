@@ -18,7 +18,7 @@ const DateInput = (props: {
         value={value}
         placeholder={props.placeholder}
         type='date'
-        className='w-128 h-12 mt-3.5 ml-5 px-5 py-3 bg-transparent border-brand-black placeholder-brand-black'
+        className='w-128 h-12 mt-3.5 ml-5 px-5 py-3 bg-transparent border-brand-black'
       />
       <FormError name={props.name} />
     </div>

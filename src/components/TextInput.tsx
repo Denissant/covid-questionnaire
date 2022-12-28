@@ -23,7 +23,7 @@ const TextInput = (props: {
         id={props.name}
         placeholder={props.placeholder}
         type='text'
-        className='w-128 h-12 px-5 py-3 bg-transparent border-brand-black placeholder-brand-black'
+        className='w-128 h-12 px-5 py-3 bg-transparent border-brand-black placeholder-neutral-400'
       />
       <FormError name={props.name} />
     </div>
