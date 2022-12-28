@@ -4,7 +4,7 @@ const AnimatedBox = () => {
   const className = useAnimatedBox();
 
   return (
-    <div className='absolute w-full h-screen overflow-hidden'>
+    <div className='absolute w-full h-screen overflow-hidden pointer-events-none'>
       <div id='animated-box-wrapper' className={className}>
         <div id='animated-box-1'></div>
         <div id='animated-box-2'></div>
