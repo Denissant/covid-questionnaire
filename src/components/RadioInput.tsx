@@ -10,7 +10,7 @@ const RadioInput = (props: {
   const { form, value } = useFormContextAndWatch(props.name);
 
   return (
-    <div className='flex flex-col mt-6 mb-7'>
+    <div className='flex flex-col'>
       <FormLabel name={props.name} label={props.label} />
       {props.options.map((option, index) => (
         <div className='flex mb-4.5 items-start' key={index}>

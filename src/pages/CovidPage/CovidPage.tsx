@@ -52,7 +52,7 @@ const CovidPage = () => {
       <img
         src='/assets/background-covid.png'
         alt=''
-        className='-mt-4 mr-3 animate-fade-in'
+        className='mt-1 mr-3 animate-fade-in'
       />
     </>
   );

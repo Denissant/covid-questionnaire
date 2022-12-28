@@ -63,7 +63,7 @@ const VaccinePage = () => {
       <img
         src='/assets/background-vaccine.png'
         alt=''
-        className='mt-11 -mr-1 animate-fade-in'
+        className='mt-16 pointer-events-none -mr-1 animate-fade-in'
       />
     </>
   );

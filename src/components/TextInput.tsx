@@ -11,7 +11,7 @@ const TextInput = (props: {
   const { form, value } = useFormContextAndWatch(props.name);
 
   return (
-    <div className='flex flex-col mt-6'>
+    <div className='flex flex-col mb-4.5'>
       <FormLabel
         name={props.name}
         label={props.label}
