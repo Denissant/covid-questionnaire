@@ -10,7 +10,7 @@ const DateInput = (props: {
   const { form, value } = useFormContextAndWatch(props.name);
 
   return (
-    <div className='flex flex-col mt-6'>
+    <div className='flex flex-col'>
       <FormLabel name={props.name} label={props.label} />
       <input
         {...form.register(props.name, props.validationRules)}

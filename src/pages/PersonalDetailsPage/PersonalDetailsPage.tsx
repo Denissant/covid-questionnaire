@@ -61,7 +61,7 @@ const PersonalDetailsPage = () => {
       <img
         src='/assets/background-personal-details.png'
         alt=''
-        className='-mt-16 -mr-8 animate-fade-in'
+        className='-mt-11 -mr-8 animate-fade-in'
       />
     </>
   );
