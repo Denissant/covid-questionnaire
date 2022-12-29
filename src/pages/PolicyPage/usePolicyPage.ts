@@ -16,7 +16,7 @@ export const usePolicyPage = () => {
         continue;
       }
       if (key === 'had_antibody_test' || key === 'had_vaccine') {
-        formData[key] = Boolean(value);
+        formData[key] = value === 'true';
       }
       if (key === 'test_date' || key === 'number') {
         if (!formData['antibodies']) formData['antibodies'] = {};
