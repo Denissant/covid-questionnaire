@@ -29,6 +29,12 @@ const CovidPage = () => {
               name='test_date'
               label='თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი რიცხვი და ანტისხეულების რაოდენობა'
               placeholder='დდ/თთ/წწ'
+              validationRules={{
+                validate: (value: string) =>
+                  !value ||
+                  Date.now() > new Date(value).getTime() ||
+                  'შეყვანილი თარიღი არასწორია',
+              }}
             />
             <div className='m-5'>
               <TextInput
@@ -45,7 +51,12 @@ const CovidPage = () => {
             name='covid_sickness_date'
             label='მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა Covid-19*'
             placeholder='დდ/თთ/წწ'
-            validationRules={{ required: 'ამ ველის შევსება სავალდებულოა' }}
+            validationRules={{
+              required: 'ამ ველის შევსება სავალდებულოა',
+              validate: (value: string) =>
+                Date.now() > new Date(value).getTime() ||
+                'შეყვანილი თარიღი არასწორია',
+            }}
           />
         )}
       </Form>
